@@ -1,0 +1,11 @@
+{
+	"allowParens": "avoid",
+	"endOfLine": "lf",
+	"htmlWhitespaceSensitivity": "css",
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"semi": true,
+	"tabWidth": 4,
+	"tailwindConfig": "./tailwind.config.js",
+	"tailwindFunctions": ["cn"],
+	"useTabs": true
+}

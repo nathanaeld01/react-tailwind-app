@@ -1,0 +1,117 @@
+/********* Nav Toggle *********/
+.navigation > .nav-toggle::before,
+.navigation > .nav-toggle::after {
+	@apply block h-0.5 w-full rounded-sm bg-primary transition-all duration-300 ease-in-out content-[""];
+}
+
+.navigation > .nav-toggle::before {
+	@apply mb-2;
+}
+
+@media screen(max-xl) {
+	.navigation.active > .nav-toggle::before {
+		@apply translate-y-1 -rotate-45;
+	}
+
+	.navigation.active > .nav-toggle::after {
+		@apply -translate-y-1.5 rotate-45;
+	}
+}
+
+/****** Nav Item ******/
+.navigation .nav-item.dropdown > .span-label.chevron {
+	@apply pr-8;
+}
+
+.navigation .nav-item.dropdown > .span-label.chevron::after {
+	@apply absolute inset-y-0 right-4 my-auto block size-1.5 rotate-45 border-b-2 border-r-2 border-light-gray content-[''];
+}
+
+.navigation .nav-item.dropdown:hover > .span-label {
+	@apply z-3 text-primary/70;
+}
+
+.navigation .nav-item.dropdown:hover > .span-label::before {
+	@apply absolute left-0 top-0 -z-1 h-[calc(100%+.75rem)] w-full rounded rounded-b-none border-4 border-b-0 border-primary bg-white content-[''];
+}
+
+/****** Nav Tiles ******/
+.nav-tile .dot::after {
+	@apply relative ml-3.5 inline-block h-3.5 rounded-full text-xs font-light leading-4 tracking-[0.02rem] content-[''];
+}
+
+/****** Nav Foot Columns ******/
+.nav-foot-col {
+	@apply flex grow flex-col gap-4;
+}
+
+.nav-foot-col .nav-foot-item {
+	@apply relative font-normal;
+}
+
+.nav-foot-col .nav-foot-item.active {
+	@apply font-medium no-underline;
+}
+
+.nav-foot-col .nav-foot-item.active::before {
+	@apply bg-green absolute -left-6 top-1.5 block size-2.5 rounded-full transition-all duration-300 content-[''];
+}
+
+.nav-foot-col .nav-foot-item.badge::after {
+	@apply relative -top-0.5 left-1.5 z-1 inline-block rounded-full px-2 text-xs tracking-wide;
+}
+
+.nav-foot-col .nav-foot-item.new::after {
+	@apply bg-primary text-white content-['new'];
+}
+
+.nav-foot-col .nav-foot-item.fun::after {
+	@apply border border-primary content-['fun'];
+}
+
+/****** Nav Animation ******/
+@media screen(xl) {
+	.navigation.nav-show {
+		animation-name: bg-hide;
+		animation-duration: 0.6s;
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+	}
+
+	.navigation.nav-show.nav-sticky.nav-open {
+		animation-fill-mode: forwards;
+		animation-name: bg-show;
+		pointer-events: all;
+		box-shadow: 0 0 0 2px #242938;
+	}
+
+	.menu-list.menu-sticky > * {
+		pointer-events: none;
+	}
+
+	.menu-list.menu-sticky.menu-open > * {
+		pointer-events: all;
+	}
+
+	.item-show {
+		animation-name: drop-show;
+		animation-duration: 0.5s;
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+	}
+
+	.item-show.item-hide {
+		animation-name: lift-hide;
+		animation-duration: 0.6s;
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+	}
+
+	.item-show.item-open.item-hide {
+		pointer-events: all;
+		animation-name: drop-show;
+		animation-duration: 0.5s;
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+	}
+}

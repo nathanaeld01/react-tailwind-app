@@ -1,0 +1,22 @@
+.btn {
+	@apply transition-button inline-flex items-center justify-center rounded px-8.5 py-2.5 text-xl font-medium;
+}
+
+/********* Button Colors  *********/
+.btn-primary {
+	@apply bg-primary text-white hover:ring-button;
+}
+
+.btn-secondary {
+	@apply border-2 border-primary text-primary hover:ring-button;
+}
+
+/********* Button Sizes  *********/
+.btn-sm {
+	@apply px-6 py-1.5;
+}
+
+/********* Button Text  *********/
+.btn-text-md {
+	@apply text-lg leading-8.5;
+}
