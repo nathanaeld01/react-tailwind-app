@@ -54,7 +54,7 @@
 }
 
 .nav-foot-col .nav-foot-item.active::before {
-	@apply bg-green absolute -left-6 top-1.5 block size-2.5 rounded-full transition-all duration-300 content-[''];
+	@apply absolute -left-6 top-1.5 block size-2.5 rounded-full bg-green transition-all duration-300 content-[''];
 }
 
 .nav-foot-col .nav-foot-item.badge::after {
@@ -85,11 +85,11 @@
 		box-shadow: 0 0 0 2px #242938;
 	}
 
-	.menu-list.menu-sticky > * {
+	.menu-list.menu-sticky > nav > * {
 		pointer-events: none;
 	}
 
-	.menu-list.menu-sticky.menu-open > * {
+	.menu-list.menu-sticky.menu-open > nav > * {
 		pointer-events: all;
 	}
 
