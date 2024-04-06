@@ -5,7 +5,7 @@ function App() {
 	return (
 		<>
 			<Navigation />
-			<main className="pt-42.5 size-full">
+			<main className="size-full pt-42.5">
 				<PricingSection />
 			</main>
 		</>
