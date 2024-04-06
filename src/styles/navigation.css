@@ -42,7 +42,7 @@
 
 /****** Nav Foot Columns ******/
 .nav-foot-col {
-	@apply flex grow flex-col gap-4;
+	@apply flex w-full grow flex-col gap-4 md:w-auto sm:w-[calc(50%-1rem)];
 }
 
 .nav-foot-col .nav-foot-item {

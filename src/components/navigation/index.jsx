@@ -83,7 +83,7 @@ export const Navigation = () => {
 		<div
 			className={cn(
 				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-full items-center justify-between px-[4%] py-7.5 hover:bg-white 2xl:px-[calc(50%-660px)]",
-				isToggled && "active max-xl:!animate-none",
+				isToggled && "active max-sm:bg-white max-xl:!animate-none",
 				navClasses,
 			)}
 			ref={navRef}
@@ -98,12 +98,17 @@ export const Navigation = () => {
 			</div>
 			<button
 				className="nav-toggle relative z-4 block size-5 origin-center cursor-pointer xl:hidden"
-				onClick={() => setIsToggled(!isToggled)}
+				onClick={() => {
+					document.body.style.overflow = isToggled
+						? "auto"
+						: "hidden";
+					setIsToggled(!isToggled);
+				}}
 				type="button"
 			/>
 			<div
 				className={cn(
-					"grow max-xl:fixed max-xl:left-0 max-xl:top-0 max-xl:hidden max-xl:bg-white max-xl:px-[4%] max-xl:pt-25 max-xl:size-dv xl:pl-5",
+					"grow max-xl:fixed max-xl:left-0 max-xl:top-0 max-xl:hidden max-xl:overflow-y-auto max-xl:bg-white max-xl:px-[4%] max-xl:pt-25 max-xl:size-dv xl:pl-5",
 					isToggled && "max-xl:block",
 					menuClasses,
 				)}
@@ -243,7 +248,7 @@ export const Navigation = () => {
 							•••
 						</NavDropdownTitle>
 						<NavDropdownMenu className="max-xl:visible max-xl:static max-xl:block max-xl:w-full max-xl:border-0 max-xl:p-0">
-							<div className="mb-7.5 flex gap-5">
+							<div className="mb-7.5 flex flex-col gap-5 max-md:flex-wrap sm:flex-row">
 								<div className="nav-foot-col">
 									<h4 className="font-semibold">Solutions</h4>
 									<FootItem>No code</FootItem>
@@ -308,24 +313,29 @@ export const Navigation = () => {
 							</div>
 						</NavDropdownMenu>
 					</NavDropdown>
-					<div className="flex flex-row-reverse justify-between max-xl:px-6 max-xl:pb-15 max-xl:pt-5 max-xl:*:w-[30%] xl:ml-auto xl:flex-row xl:gap-4">
+					<div className="flex flex-col-reverse justify-between max-sm:gap-5 max-xl:px-6 max-xl:pb-15 max-xl:pt-5 sm:flex-row-reverse sm:max-xl:*:w-[30%] xl:ml-auto xl:flex-row xl:gap-4">
 						<Link
 							className={cn(
-								"inline-flex items-center justify-center px-6 xl:px-4",
+								"inline-flex items-center justify-center px-6 max-sm:w-full max-sm:py-2.5 xl:px-4",
 								itemClasses,
 							)}
 						>
 							Log In
 						</Link>
 						<Button
-							className={itemClasses}
+							className={cn("max-sm:w-full", itemClasses)}
 							size="sm"
 							text="md"
 							variant="secondary"
 						>
 							Get a demo
 						</Button>
-						<Button size="sm" text="md" variant="primary">
+						<Button
+							className="max-sm:w-full"
+							size="sm"
+							text="md"
+							variant="primary"
+						>
 							Try for free
 						</Button>
 					</div>
