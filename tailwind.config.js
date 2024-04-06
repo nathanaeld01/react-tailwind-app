@@ -24,7 +24,10 @@ module.exports = {
 			colors: {
 				green: "#13CF14",
 				"light-gray": "#c0c4c9",
+				mint: "#00D2AB",
+				pink: "#FF5CA1",
 				primary: "#242938",
+				red: "#FA3C4D",
 				secondary: {
 					blue: "#A0D0FF",
 					green: "#89E789",
@@ -34,8 +37,13 @@ module.exports = {
 				},
 				tertiary: {
 					green: "#BDF2BD",
+					mint: "#BFF3E9",
 					pink: "#FFD1E5",
+					violet: "#D9CBFF",
+					yellow: "#FFEEB8",
 				},
+				violet: "#7646FF",
+				yellow: "#FFC300",
 			},
 			fontSize: {
 				"3.5xl": "2rem",

@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import { Switch } from "./ui/switch";
 
 const PriceChecker = ({ children }) => {
-	const [isPriceAnnual, setIsPriceAnnual] = useState(false);
+	const [isPriceAnnual, setIsPriceAnnual] = useState(true);
 
 	return (
 		<PriceContext.Provider value={{ isPriceAnnual, setIsPriceAnnual }}>

@@ -4,6 +4,7 @@ import {
 	PriceDiscount,
 	PriceSwitcher,
 } from "../price-checker";
+import { Highlight, HighlightContent } from "../ui/highlight";
 
 export const PricingSection = () => {
 	return (
@@ -21,7 +22,7 @@ export const PricingSection = () => {
 						<PriceSwitcher />
 					</div>
 				</div>
-				<div className="flex flex-col flex-wrap max-lg:flex-nowrap max-lg:gap-5 md:flex-row">
+				<div className="mb-7.5 flex flex-col flex-wrap max-lg:flex-nowrap max-lg:gap-5 md:flex-row">
 					<PriceCard
 						className="hover:bg-tertiary-green lg:border-r lg:border-r-[#F2F2F2]"
 						price={{ annually: 10, monthly: 12 }}
@@ -44,6 +45,33 @@ export const PricingSection = () => {
 						<br />
 						No Fibery branding on forms, Extra-caring support
 					</PriceCard>
+				</div>
+				<div className="flex flex-col">
+					<HighlightContent>
+						<span className="font-semibold">🤑 100% free</span> for{" "}
+						<Highlight color="pink">startups</Highlight> with less
+						than 30 employees,{" "}
+						<Highlight color="green">
+							open-source projects
+						</Highlight>
+					</HighlightContent>
+					<div className="mx-auto h-px w-[calc(100%-6.875rem)] bg-[#E5E8EB]" />
+					<HighlightContent>
+						<span className="font-semibold">💸 50% discount</span>{" "}
+						for{" "}
+						<Highlight color="violet">
+							nonprofit organizations
+						</Highlight>
+						,{" "}
+						<Highlight color="mint">
+							educational organizations
+						</Highlight>
+						,{" "}
+						<Highlight color="yellow">
+							Ukrainian companies
+						</Highlight>{" "}
+						(till January 1, 2030)
+					</HighlightContent>
 				</div>
 			</section>
 		</PriceChecker>

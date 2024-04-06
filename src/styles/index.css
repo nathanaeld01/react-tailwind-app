@@ -37,6 +37,50 @@ a {
 	@apply px-[8%];
 }
 
+.highlight-container.pink {
+	@apply bg-tertiary-pink;
+}
+
+.highlight-container.green {
+	@apply bg-tertiary-green;
+}
+
+.highlight-container.yellow {
+	@apply bg-tertiary-yellow;
+}
+
+.highlight-container.mint {
+	@apply bg-tertiary-mint;
+}
+
+.highlight-container.violet {
+	@apply bg-tertiary-violet;
+}
+
+.highlight-container > .highlight {
+	@apply after:absolute after:bottom-0 after:left-0 after:-z-1 after:block after:h-2/3 after:w-full after:transition-[background,height] after:duration-300 after:content-[''];
+}
+
+.highlight-container > .highlight.pink {
+	@apply border-b-pink hover:after:bg-pink/50 after:bg-tertiary-pink;
+}
+
+.highlight-container > .highlight.green {
+	@apply border-b-green after:bg-tertiary-green hover:after:bg-green/50;
+}
+
+.highlight-container > .highlight.yellow {
+	@apply border-b-yellow after:bg-tertiary-yellow hover:after:bg-yellow/50;
+}
+
+.highlight-container > .highlight.mint {
+	@apply border-b-mint after:bg-tertiary-mint hover:after:bg-mint/50;
+}
+
+.highlight-container > .highlight.violet {
+	@apply border-b-violet after:bg-tertiary-violet hover:after:bg-violet/50;
+}
+
 @keyframes drop-show {
 	0% {
 		opacity: 0.7;
