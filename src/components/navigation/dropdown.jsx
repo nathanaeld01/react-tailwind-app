@@ -58,7 +58,7 @@ const NavDropdownMenu = ({ children, className }) => {
 			className={cn(
 				"absolute top-full -z-2 mt-2 hidden min-w-[calc(100%+8.25rem)] rounded border-4 border-primary bg-white px-5 py-2.5 group-hover:block",
 				isWide &&
-					"py-13 px-22 -left-[8rem] mt-[7px] w-[calc(100%+8rem)] min-w-[unset]",
+					"-left-[8rem] mt-[7px] w-[calc(100%+8rem)] min-w-[unset] px-22 py-13",
 				className,
 			)}
 		>
