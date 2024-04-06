@@ -1,5 +1,5 @@
 .btn {
-	@apply transition-button inline-flex items-center justify-center rounded px-8.5 py-2.5 text-xl font-medium;
+	@apply inline-flex items-center justify-center whitespace-nowrap rounded px-8.5 py-2.5 text-xl font-medium transition-button;
 }
 
 /********* Button Colors  *********/

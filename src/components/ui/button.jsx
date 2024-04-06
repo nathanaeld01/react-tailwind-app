@@ -4,6 +4,9 @@ import { cn } from "../../lib/utils";
 import "../../styles/button.css";
 
 const buttonStyles = cva("btn", {
+	defaultVariants: {
+		variant: "primary",
+	},
 	variants: {
 		size: {
 			sm: "btn-sm",

@@ -32,11 +32,22 @@ module.exports = {
 					red: "#FD9EA6",
 					yellow: "#FFE180",
 				},
+				tertiary: {
+					green: "#BDF2BD",
+					pink: "#FFD1E5",
+				},
+			},
+			fontSize: {
+				"3.5xl": "2rem",
+				"4.5xl": "2.5rem",
+				"5.25xl": "3.25rem",
+				"7.5xl": "5rem",
 			},
 			lineHeight: {
 				8.5: "2.125rem",
 			},
 			spacing: {
+				4.5: "1.125rem",
 				7.5: "1.875rem",
 				8.5: "2.125rem",
 				13: "3.25rem",
@@ -44,8 +55,11 @@ module.exports = {
 				22: "5.5rem",
 				25: "6.25rem",
 				26: "6.5rem",
+				30: "7.5rem",
 				33: "8.25rem",
 				34: "8.5rem",
+				35: "8.75rem",
+				42.5: "10.625rem",
 			},
 			zIndex: {
 				1: 1,
@@ -56,8 +70,8 @@ module.exports = {
 			},
 		},
 		fontFamily: {
+			exo: ["Exo", "sans-serif"],
 			heebo: ["Heebo", "sans-serif"],
-			khand: ["Khand", "sans-serif"],
 		},
 		screens: {
 			"2xl": "1440px",

@@ -1,18 +1,6 @@
-import { createContext, useContext } from "react";
-
+import { DropdownContext, useDropdown } from "../../context/dropdown-context";
 import { cn } from "../../lib/utils";
 import { Link } from "../ui/link";
-
-const DropdownContext = createContext();
-
-const useDropdown = () => {
-	const context = useContext(DropdownContext);
-
-	if (!context)
-		throw new Error("useDropdown must be used within a DropdownProvider");
-
-	return context;
-};
 
 const NavDropdown = ({ children, className, isWide = false }) => {
 	return (
