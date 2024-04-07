@@ -5,7 +5,11 @@
 }
 
 .navigation > .nav-toggle::before {
-	@apply mb-2 max-xl:translate-y-1 max-xl:-rotate-45;
+	@apply mb-2;
+}
+
+.navigation.active > .nav-toggle::before {
+	@apply max-xl:translate-y-1 max-xl:-rotate-45;
 }
 
 .navigation.active > .nav-toggle::after {
