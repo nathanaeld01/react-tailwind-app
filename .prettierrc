@@ -1,5 +1,5 @@
 {
-	"allowParens": "avoid",
+	"arrowParens": "avoid",
 	"endOfLine": "lf",
 	"htmlWhitespaceSensitivity": "css",
 	"plugins": ["prettier-plugin-tailwindcss"],

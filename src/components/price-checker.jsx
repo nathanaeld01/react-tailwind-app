@@ -68,7 +68,7 @@ const PriceCard = ({ children, className, price, title }) => {
 	const count = useMotionValue(
 		isPriceAnnual ? price.annually : price.monthly,
 	);
-	const currentPrice = useTransform(count, (value) => {
+	const currentPrice = useTransform(count, value => {
 		return value.toFixed(0);
 	});
 
@@ -76,7 +76,7 @@ const PriceCard = ({ children, className, price, title }) => {
 		const newCount = isPriceAnnual ? price.annually : price.monthly;
 		animate(count, newCount, {
 			duration: 0.375,
-			onUpdate: (latest) => latest.toFixed(0),
+			onUpdate: latest => latest.toFixed(0),
 		});
 	}, [count, price, isPriceAnnual]);
 
@@ -87,7 +87,7 @@ const PriceCard = ({ children, className, price, title }) => {
 				className,
 			)}
 		>
-			<div className="">
+			<div className="shrink-0">
 				<div className="relative mb-4.5 whitespace-nowrap text-3xl font-semibold leading-none">
 					<span>{title}</span>
 				</div>
@@ -105,7 +105,9 @@ const PriceCard = ({ children, className, price, title }) => {
 					Start your free trial
 				</Button>
 			</div>
-			<div className="">{children}</div>
+			<div className="text-sm">
+				<span className="text-wrap">{children}</span>
+			</div>
 		</div>
 	);
 };

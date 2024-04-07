@@ -34,7 +34,19 @@ a {
 }
 
 .section {
-	@apply px-[8%];
+	@apply px-[calc(50%-660px)];
+}
+
+.section-wide {
+	@apply px-[8%] xl:px-[10%] 2xl:px-[calc(50%-660px)];
+}
+
+.section > .section-row {
+	@apply px-[8%] xl:px-[calc(50%-517px)];
+}
+
+.section-wide > .section-row {
+	@apply px-[calc(50%-572px)];
 }
 
 .highlight-container.pink {
@@ -62,7 +74,7 @@ a {
 }
 
 .highlight-container > .highlight.pink {
-	@apply border-b-pink hover:after:bg-pink/50 after:bg-tertiary-pink;
+	@apply border-b-pink after:bg-tertiary-pink hover:after:bg-pink/50;
 }
 
 .highlight-container > .highlight.green {

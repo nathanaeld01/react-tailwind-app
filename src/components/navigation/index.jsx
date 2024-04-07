@@ -3,8 +3,6 @@ import { SearchIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { cn } from "../../lib/utils";
-// eslint-disable-next-line perfectionist/sort-imports
-import "../../styles/navigation.css";
 import { Button } from "../ui/button";
 import { Link } from "../ui/link";
 import {
@@ -16,6 +14,9 @@ import {
 import { NavItem, NavItemTitle } from "./item";
 import { NavTile, NavTileContent, NavTileTitle } from "./tiles";
 
+// eslint-disable-next-line perfectionist/sort-imports
+import "../../styles/navigation.css";
+
 const FootItem = ({ active, children, className }) => {
 	return (
 		<Link className={cn("nav-foot-item", active && "active", className)}>
@@ -25,6 +26,7 @@ const FootItem = ({ active, children, className }) => {
 };
 
 export const Navigation = () => {
+	const [hasScrolled, setHasScrolled] = useState(false);
 	const [isToggled, setIsToggled] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
@@ -33,8 +35,10 @@ export const Navigation = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 0) setIsScrolled(true);
-			else setIsScrolled(false);
+			if (window.scrollY > 0) {
+				if (!hasScrolled) setHasScrolled(true);
+				setIsScrolled(true);
+			} else setIsScrolled(false);
 		};
 
 		window.addEventListener("scroll", handleScroll);
@@ -42,7 +46,7 @@ export const Navigation = () => {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, []);
+	}, [hasScrolled]);
 
 	useEffect(() => {
 		if (!isScrolled) return;
@@ -62,7 +66,7 @@ export const Navigation = () => {
 	}, [isScrolled]);
 
 	const navClasses = clsx(
-		"nav-show",
+		hasScrolled && isHovered && "nav-show",
 		isScrolled && "nav-sticky",
 		isHovered && "nav-open",
 	);
@@ -74,7 +78,7 @@ export const Navigation = () => {
 	);
 
 	const itemClasses = clsx(
-		"item-show",
+		hasScrolled && "item-show",
 		isScrolled && "item-hide",
 		isHovered && "item-open",
 	);
@@ -83,7 +87,7 @@ export const Navigation = () => {
 		<div
 			className={cn(
 				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-full items-center justify-between px-[4%] py-7.5 hover:bg-white 2xl:px-[calc(50%-660px)]",
-				isToggled && "active max-sm:bg-white max-xl:!animate-none",
+				isToggled && "active max-xl:!animate-none max-sm:bg-white",
 				navClasses,
 			)}
 			ref={navRef}
@@ -313,7 +317,7 @@ export const Navigation = () => {
 							</div>
 						</NavDropdownMenu>
 					</NavDropdown>
-					<div className="flex flex-col-reverse justify-between max-sm:gap-5 max-xl:px-6 max-xl:pb-15 max-xl:pt-5 sm:flex-row-reverse sm:max-xl:*:w-[30%] xl:ml-auto xl:flex-row xl:gap-4">
+					<div className="flex flex-col-reverse justify-between max-xl:px-6 max-xl:pb-15 max-xl:pt-5 max-sm:gap-5 sm:flex-row-reverse sm:max-xl:*:w-[30%] xl:ml-auto xl:flex-row xl:gap-4">
 						<Link
 							className={cn(
 								"inline-flex items-center justify-center px-6 max-sm:w-full max-sm:py-2.5 xl:px-4",

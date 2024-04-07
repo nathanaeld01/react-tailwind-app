@@ -7,7 +7,7 @@ module.exports = {
 		"eslint:recommended",
 		"react-app",
 		"react-app/jest",
-		"plugin:perfectionist/recommended-natural",
+		"plugin:perfectionist/recommended-alphabetical",
 		"plugin:prettier/recommended",
 	],
 	overrides: [

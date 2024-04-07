@@ -5,17 +5,11 @@
 }
 
 .navigation > .nav-toggle::before {
-	@apply mb-2;
+	@apply mb-2 max-xl:translate-y-1 max-xl:-rotate-45;
 }
 
-@media screen(max-xl) {
-	.navigation.active > .nav-toggle::before {
-		@apply translate-y-1 -rotate-45;
-	}
-
-	.navigation.active > .nav-toggle::after {
-		@apply -translate-y-1.5 rotate-45;
-	}
+.navigation.active > .nav-toggle::after {
+	@apply max-xl:-translate-y-1.5 max-xl:rotate-45;
 }
 
 /****** Nav Item ******/
@@ -24,7 +18,7 @@
 }
 
 .navigation .nav-item.dropdown > .span-label.chevron::after {
-	@apply absolute inset-y-0 right-4 my-auto block size-1.5 rotate-45 border-b-2 border-r-2 border-light-gray content-[''];
+	@apply absolute inset-y-0 right-4 my-auto block size-1.5 rotate-45 border-b-2 border-r-2 border-light-gray-border content-[''];
 }
 
 .navigation .nav-item.dropdown:hover > .span-label {
@@ -42,7 +36,7 @@
 
 /****** Nav Foot Columns ******/
 .nav-foot-col {
-	@apply flex w-full grow flex-col gap-4 md:w-auto sm:w-[calc(50%-1rem)];
+	@apply flex w-full grow flex-col gap-4 sm:w-[calc(50%-1rem)] md:w-auto;
 }
 
 .nav-foot-col .nav-foot-item {

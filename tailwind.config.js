@@ -4,6 +4,7 @@ module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	mode: "jit",
 	plugins: [
+		require("@pyncz/tailwind-mask-image"),
 		plugin(function ({ addUtilities }) {
 			addUtilities({
 				".ring-button": {
@@ -23,7 +24,11 @@ module.exports = {
 		extend: {
 			colors: {
 				green: "#13CF14",
-				"light-gray": "#c0c4c9",
+				"light-gray": {
+					bg: "#F8F9FA",
+					border: "#E5E8EB",
+					icon: "#c0c4c9",
+				},
 				mint: "#00D2AB",
 				pink: "#FF5CA1",
 				primary: "#242938",
@@ -31,7 +36,9 @@ module.exports = {
 				secondary: {
 					blue: "#A0D0FF",
 					green: "#89E789",
+					mint: "#7FE8D4",
 					orange: "#FFBF94",
+					pink: "#FFAED0",
 					red: "#FD9EA6",
 					yellow: "#FFE180",
 				},
@@ -55,11 +62,9 @@ module.exports = {
 				8.5: "2.125rem",
 			},
 			spacing: {
-				4.5: "1.125rem",
-				7.5: "1.875rem",
-				8.5: "2.125rem",
 				13: "3.25rem",
 				15: "3.75rem",
+				17: "4.25rem",
 				22: "5.5rem",
 				25: "6.25rem",
 				26: "6.5rem",
@@ -67,7 +72,10 @@ module.exports = {
 				33: "8.25rem",
 				34: "8.5rem",
 				35: "8.75rem",
+				4.5: "1.125rem",
 				42.5: "10.625rem",
+				7.5: "1.875rem",
+				8.5: "2.125rem",
 			},
 			zIndex: {
 				1: 1,
@@ -84,11 +92,6 @@ module.exports = {
 		screens: {
 			"2xl": "1440px",
 			lg: "992px",
-			"max-2xl": { max: "1440px" },
-			"max-lg": { max: "992px" },
-			"max-md": { max: "768px" },
-			"max-sm": { max: "576px" },
-			"max-xl": { max: "1200px" },
 			md: "768px",
 			sm: "576px",
 			xl: "1200px",

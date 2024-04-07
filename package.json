@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@pyncz/tailwind-mask-image": "^2.0.0",
 		"@radix-ui/react-switch": "^1.0.3",
 		"@testing-library/jest-dom": "^6.4.2",
 		"@testing-library/react": "^14.2.2",
@@ -21,7 +22,9 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"lint": "eslint . --ext .js,.jsx",
+		"prettier": "prettier --write ."
 	},
 	"eslintConfig": {
 		"extends": [
