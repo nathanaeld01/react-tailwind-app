@@ -5,7 +5,7 @@ const Program = ({ children, className }) => {
 	return (
 		<Link
 			className={cn(
-				"group/program relative flex size-full min-h-full flex-col items-start justify-start overflow-hidden rounded-lg border-2 border-transparent px-14 pb-17 pt-10 text-primary transition-all duration-200 hover:border-primary hover:bg-white hover:ring-2 hover:ring-primary",
+				"group/program relative flex size-full min-h-full flex-col items-start justify-start overflow-hidden rounded-lg border-2 border-transparent px-14 pb-17 pt-10 text-primary transition-all duration-200 hover:border-primary hover:bg-white hover:no-underline hover:ring-2 hover:ring-primary",
 				className,
 			)}
 		>

@@ -2,6 +2,7 @@ import circle from "../../assets/circle-icon.svg";
 import hexagon from "../../assets/hexagon-icon.svg";
 import rhombus from "../../assets/rhombus-icon.svg";
 import star from "../../assets/stars-icon.svg";
+import { Link } from "../ui/link";
 
 export const AboutSection = () => {
 	return (
@@ -11,7 +12,9 @@ export const AboutSection = () => {
 					<h4 className="grow text-3.5xl font-semibold">
 						✨ Syncspace — pay only for what you use
 					</h4>
-					<span className="">Learn more →</span>
+					<Link className="whitespace-nowrap text-sm font-medium uppercase leading-none text-green transition-colors duration-300 hover:text-primary hover:no-underline max-lg:self-end">
+						Learn more →
+					</Link>
 				</div>
 			</div>
 			<div className="section-row">
