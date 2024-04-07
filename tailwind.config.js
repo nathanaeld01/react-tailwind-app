@@ -30,6 +30,7 @@ module.exports = {
 					icon: "#c0c4c9",
 				},
 				mint: "#00D2AB",
+				orange: "#FF7E29",
 				pink: "#FF5CA1",
 				primary: "#242938",
 				red: "#FA3C4D",
@@ -45,6 +46,7 @@ module.exports = {
 				tertiary: {
 					green: "#BDF2BD",
 					mint: "#BFF3E9",
+					orange: "#FFDBC3",
 					pink: "#FFD1E5",
 					violet: "#D9CBFF",
 					yellow: "#FFEEB8",
