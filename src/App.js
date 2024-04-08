@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer";
 import { Navigation } from "./components/navigation";
 import { AboutSection } from "./components/sections/about";
 import { PricingSection } from "./components/sections/pricing";
@@ -14,6 +15,7 @@ function App() {
 				<ProgramsSection />
 				<QNASection />
 			</main>
+			<Footer />
 		</>
 	);
 }

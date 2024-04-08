@@ -66,6 +66,9 @@ module.exports = {
 			rotate: {
 				135: "135deg",
 			},
+			scale: {
+				120: "1.2",
+			},
 			spacing: {
 				13: "3.25rem",
 				15: "3.75rem",

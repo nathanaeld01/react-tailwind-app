@@ -2,41 +2,37 @@ import { DropdownContext, useDropdown } from "../../context/dropdown-context";
 import { cn } from "../../lib/utils";
 import { Link } from "../ui/link";
 
-const NavDropdown = ({ children, className, isWide = false }) => {
-	return (
-		<DropdownContext.Provider value={{ isWide }}>
-			<div
-				className={cn(
-					"nav-item dropdown group pointer-events-auto relative font-semibold",
-					isWide && "static",
-					className,
-				)}
-			>
-				{children}
-			</div>
-		</DropdownContext.Provider>
-	);
-};
+const NavDropdown = ({ children, className, isWide = false }) => (
+	<DropdownContext.Provider value={{ isWide }}>
+		<div
+			className={cn(
+				"nav-item dropdown group pointer-events-auto relative font-semibold",
+				isWide && "static",
+				className,
+			)}
+		>
+			{children}
+		</div>
+	</DropdownContext.Provider>
+);
 
 const NavDropdownTitle = ({
 	children,
 	className,
 	showChevron = true,
 	...props
-}) => {
-	return (
-		<span
-			className={cn(
-				"span-label relative inline-flex h-12 cursor-default items-center px-5 font-bold text-primary transition-[color] group-[.dropdown]:transition-[color]",
-				showChevron && "chevron",
-				className,
-			)}
-			{...props}
-		>
-			{children}
-		</span>
-	);
-};
+}) => (
+	<span
+		className={cn(
+			"span-label relative inline-flex h-12 cursor-default items-center px-5 font-bold text-primary transition-[color] group-[.dropdown]:transition-[color]",
+			showChevron && "chevron",
+			className,
+		)}
+		{...props}
+	>
+		{children}
+	</span>
+);
 
 const NavDropdownMenu = ({ children, className }) => {
 	const { isWide } = useDropdown();
@@ -55,12 +51,10 @@ const NavDropdownMenu = ({ children, className }) => {
 	);
 };
 
-const NavDropdownItem = ({ children }) => {
-	return (
-		<Link className="block pb-2.5 text-base font-light leading-6 text-primary hover:underline">
-			{children}
-		</Link>
-	);
-};
+const NavDropdownItem = ({ children }) => (
+	<Link className="block pb-2.5 text-base font-light leading-6 text-primary hover:underline">
+		{children}
+	</Link>
+);
 
 export { NavDropdown, NavDropdownItem, NavDropdownMenu, NavDropdownTitle };

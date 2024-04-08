@@ -17,13 +17,11 @@ import { NavTile, NavTileContent, NavTileTitle } from "./tiles";
 // eslint-disable-next-line perfectionist/sort-imports
 import "../../styles/navigation.css";
 
-const FootItem = ({ active, children, className }) => {
-	return (
-		<Link className={cn("nav-foot-item", active && "active", className)}>
-			{children}
-		</Link>
-	);
-};
+const FootItem = ({ active, children, className }) => (
+	<Link className={cn("nav-foot-item", active && "active", className)}>
+		{children}
+	</Link>
+);
 
 export const Navigation = () => {
 	const [hasScrolled, setHasScrolled] = useState(false);
@@ -103,9 +101,10 @@ export const Navigation = () => {
 			<button
 				className="nav-toggle relative z-4 block size-5 origin-center cursor-pointer xl:hidden"
 				onClick={() => {
-					document.body.style.overflow = isToggled
-						? "auto"
-						: "hidden";
+					document.body.classList.toggle(
+						"max-xl:overflow-hidden",
+						!isToggled,
+					);
 					setIsToggled(!isToggled);
 				}}
 				type="button"
@@ -253,7 +252,7 @@ export const Navigation = () => {
 						</NavDropdownTitle>
 						<NavDropdownMenu className="max-xl:visible max-xl:static max-xl:block max-xl:w-full max-xl:border-0 max-xl:p-0">
 							<div className="mb-7.5 flex flex-col gap-5 max-md:flex-wrap sm:flex-row">
-								<div className="nav-foot-col">
+								<div className="nav-foot-col mb-5 sm:w-[calc(50%-1rem)] md:w-[calc(25%-1rem)]">
 									<h4 className="font-semibold">Solutions</h4>
 									<FootItem>No code</FootItem>
 									<FootItem>Product management</FootItem>
@@ -265,7 +264,7 @@ export const Navigation = () => {
 										Template Library
 									</FootItem>
 								</div>
-								<div className="nav-foot-col">
+								<div className="nav-foot-col mb-5 w-full sm:w-[calc(50%-1rem)] md:w-[calc(25%-1rem)]">
 									<h4 className="font-semibold">Products</h4>
 									<FootItem>Features</FootItem>
 									<FootItem className="badge new">
@@ -282,7 +281,7 @@ export const Navigation = () => {
 										Anxiety
 									</FootItem>
 								</div>
-								<div className="nav-foot-col">
+								<div className="nav-foot-col mb-5 w-full sm:w-[calc(50%-1rem)] md:w-[calc(25%-1rem)]">
 									<h4 className="font-semibold">Resources</h4>
 									<FootItem>Getting Started</FootItem>
 									<FootItem>Expert Help</FootItem>
@@ -295,7 +294,7 @@ export const Navigation = () => {
 									<FootItem>Security & Privacy</FootItem>
 									<FootItem>Cookie settings</FootItem>
 								</div>
-								<div className="nav-foot-col">
+								<div className="nav-foot-col mb-5 w-full sm:w-[calc(50%-1rem)] md:w-[calc(25%-1rem)]">
 									<h4 className="font-semibold">Team</h4>
 									<FootItem>About us</FootItem>
 									<FootItem>Open startup</FootItem>
