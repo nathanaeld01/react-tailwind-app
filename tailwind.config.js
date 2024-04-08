@@ -63,6 +63,9 @@ module.exports = {
 			lineHeight: {
 				8.5: "2.125rem",
 			},
+			rotate: {
+				135: "135deg",
+			},
 			spacing: {
 				13: "3.25rem",
 				15: "3.75rem",

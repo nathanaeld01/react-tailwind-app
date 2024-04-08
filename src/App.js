@@ -2,6 +2,7 @@ import { Navigation } from "./components/navigation";
 import { AboutSection } from "./components/sections/about";
 import { PricingSection } from "./components/sections/pricing";
 import { ProgramsSection } from "./components/sections/programs";
+import { QNASection } from "./components/sections/qna";
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 				<PricingSection />
 				<AboutSection />
 				<ProgramsSection />
+				<QNASection />
 			</main>
 		</>
 	);

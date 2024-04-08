@@ -7,6 +7,9 @@ import {
 import { cn } from "../../lib/utils";
 import { Link } from "../ui/link";
 
+// eslint-disable-next-line perfectionist/sort-imports
+import "../../styles/highlight.css";
+
 const HighlightContent = ({ children }) => {
 	const [color, setColor] = useState(null);
 
