@@ -42,7 +42,7 @@ export const PricingSection = () => (
 					<br />
 					Group permissions, SAML + SSO,
 					<br />
-					No Fibery branding on forms, Extra-caring support
+					No Syncspace branding on forms, Extra-caring support
 				</PriceCard>
 			</div>
 		</PriceChecker>

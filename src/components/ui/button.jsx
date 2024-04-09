@@ -28,14 +28,12 @@ const Button = ({
 	type = "button",
 	variant,
 	...props
-}) => {
-	return (
-		<button
-			className={cn(buttonStyles({ className, size, text, variant }))}
-			type={type}
-			{...props}
-		/>
-	);
-};
+}) => (
+	<button
+		className={cn(buttonStyles({ className, size, text, variant }))}
+		type={type}
+		{...props}
+	/>
+);
 
 export { Button, buttonStyles };

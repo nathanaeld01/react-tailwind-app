@@ -1,7 +1,3 @@
-import circle from "../../assets/circle-icon.svg";
-import hexagon from "../../assets/hexagon-icon.svg";
-import rhombus from "../../assets/rhombus-icon.svg";
-import star from "../../assets/stars-icon.svg";
 import { Link } from "../ui/link";
 
 export const AboutSection = () => (
@@ -30,13 +26,13 @@ export const AboutSection = () => (
 						<div
 							className="size-25 bg-secondary-green mask-[var(--mask-img)] mask-no-repeat mask-size-contain mask-position-center"
 							style={{
-								"--mask-img": `url(${circle})`,
+								"--mask-img": `url('/assets/icons/icon-0s.svg')`,
 							}}
 						/>
 						<img
 							alt="magic wand"
 							className="absolute -bottom-2.5 -right-2.5 size-20"
-							src="/assets/magic-wand.webp"
+							src="/assets/images/magic-wand.webp"
 						/>
 					</div>
 					<div className="text-base leading-6">
@@ -50,13 +46,13 @@ export const AboutSection = () => (
 						<div
 							className="size-25 bg-secondary-yellow mask-[var(--mask-img)] mask-no-repeat mask-size-contain mask-position-center"
 							style={{
-								"--mask-img": `url(${hexagon})`,
+								"--mask-img": `url('/assets/icons/icon-6s.svg')`,
 							}}
 						/>
 						<img
 							alt="robot"
 							className="absolute -bottom-2.5 -right-2.5 size-20"
-							src="/assets/robot.webp"
+							src="/assets/images/robot.webp"
 						/>
 					</div>
 					<div className="text-base leading-6">
@@ -70,13 +66,13 @@ export const AboutSection = () => (
 						<div
 							className="size-25 bg-secondary-mint mask-[var(--mask-img)] mask-no-repeat mask-size-contain mask-position-center"
 							style={{
-								"--mask-img": `url(${star})`,
+								"--mask-img": `url('/assets/icons/icon-1s.svg')`,
 							}}
 						/>
 						<img
 							alt="vulcan hand"
 							className="absolute -bottom-2.5 -right-2.5 size-20"
-							src="/assets/vulcan-hand.webp"
+							src="/assets/images/vulcan-hand.webp"
 						/>
 					</div>
 					<div className="text-base leading-6">
@@ -90,13 +86,13 @@ export const AboutSection = () => (
 						<div
 							className="size-25 rotate-45 bg-secondary-pink mask-[var(--mask-img)] mask-no-repeat mask-size-contain mask-position-center"
 							style={{
-								"--mask-img": `url(${rhombus})`,
+								"--mask-img": `url('/assets/icons/icon-4s.svg')`,
 							}}
 						/>
 						<img
 							alt="magnifier left"
 							className="absolute -bottom-2.5 -right-2.5 size-20"
-							src="/assets/magnifier-left.webp"
+							src="/assets/images/magnifier-left.webp"
 						/>
 					</div>
 					<div className="text-base leading-6">

@@ -23,6 +23,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				blue: "#0084FF",
 				green: "#13CF14",
 				"light-gray": {
 					bg: "#F8F9FA",
@@ -41,6 +42,7 @@ module.exports = {
 					orange: "#FFBF94",
 					pink: "#FFAED0",
 					red: "#FD9EA6",
+					violet: "#CCB9FF",
 					yellow: "#FFE180",
 				},
 				tertiary: {
@@ -82,6 +84,7 @@ module.exports = {
 				35: "8.75rem",
 				4.5: "1.125rem",
 				42.5: "10.625rem",
+				5.5: "1.375rem",
 				7.5: "1.875rem",
 				8.5: "2.125rem",
 			},

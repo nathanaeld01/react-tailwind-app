@@ -11,23 +11,23 @@ export const QNASection = () => (
 		<div className="section-row mt-17 flex flex-col">
 			<Question title="How long is the trial period?">
 				It lasts for 14 days starting from the moment you signed up.
-				Fibery is powerful and demands time to explore. So you need time
-				to procrastinate, receive some reminders, get into Fibery again,
-				and, finally, "get" it. We feel that you can do it in 14-days.
-				If you'd like to have a fast learning curve, we really suggest
-				to take advantage of our{" "}
+				Syncspace is powerful and demands time to explore. So you need
+				time to procrastinate, receive some reminders, get into
+				Syncspace again, and, finally, "get" it. We feel that you can do
+				it in 14-days. If you'd like to have a fast learning curve, we
+				really suggest to take advantage of our{" "}
 				<Link className="underline">concierge support</Link>.
 			</Question>
 			<Question title="Can we access our workspace after the trial?">
 				Yes, but in a read-only mode. Once you upgrade to a paid plan,
 				you will be able to add and edit entities again.
 			</Question>
-			<Question title="Is there a free trial of Fibery AI? How much does it cost?">
+			<Question title="Is there a free trial of Syncspace AI? How much does it cost?">
 				<p>
-					Fibery AI integrates Fibery with GPT-3.5 OpenAI. You can try
-					Fibery AI in text and space creation for free — and you have
-					100 requests. Then you'll need to set up your OpenAI token —
-					here is a quick guide to help you do it.
+					Syncspace AI integrates Syncspace with GPT-3.5 OpenAI. You
+					can try Syncspace AI in text and space creation for free —
+					and you have 100 requests. Then you'll need to set up your
+					OpenAI token — here is a quick guide to help you do it.
 				</p>
 				<br />
 				<p>
@@ -41,12 +41,12 @@ export const QNASection = () => (
 				We are happy to answer your emails and Intercom messages
 				regardless of your pricing plan. Paid plans also include 1:1
 				consulting over Zoom — if you are not sure how to organize your
-				process in Fibery, we will figure it out together. We would also
-				love to assist you with onboarding new team members.
+				process in Syncspace, we will figure it out together. We would
+				also love to assist you with onboarding new team members.
 			</Question>
 			<Question title="What about this free 6 months for startups?">
-				Get 6 months of Fibery for free if your company has fewer than
-				30 employees.
+				Get 6 months of Syncspace for free if your company has fewer
+				than 30 employees.
 				<br />
 				Ditch those scattered spreadsheets — and let’s grow together.{" "}
 				<Link className="underline">Learn more & apply</Link>
@@ -96,7 +96,7 @@ export const QNASection = () => (
 			</span>
 			<p>
 				Feel free to chat with us via Intercom or send an email to
-				<Link className="underline">new@fibery.io</Link>
+				<Link className="underline">new@Syncspace.io</Link>
 			</p>
 		</div>
 	</section>
