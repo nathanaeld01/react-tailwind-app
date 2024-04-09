@@ -216,7 +216,7 @@ export const FeaturesSection = () => {
 						}}
 						title="Custom formulas"
 					>
-						<FeatureHeader className="bg-secondary-violet -rotate-[115deg]" />
+						<FeatureHeader className="-rotate-[115deg] bg-secondary-violet" />
 						<FeatureContent className="-rotate-[115deg] bg-violet">
 							Use powerful formulas to calculate both simple and
 							complex metrics for your processes. Cycle Time, Lead
