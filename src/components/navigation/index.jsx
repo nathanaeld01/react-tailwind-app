@@ -84,7 +84,7 @@ export const Navigation = () => {
 	return (
 		<div
 			className={cn(
-				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-full items-center justify-between px-[4%] py-7.5 hover:bg-white 2xl:px-[calc(50%-660px)]",
+				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-dvw items-center justify-between px-[4%] py-7.5 hover:bg-white 2xl:px-[calc(50%-660px)]",
 				isToggled && "active max-xl:!animate-none max-sm:bg-white",
 				navClasses,
 			)}
