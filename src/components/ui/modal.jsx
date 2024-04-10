@@ -22,7 +22,7 @@ const ModalOverlay = () => {
 	return (
 		<motion.div
 			animate={{ opacity: 1 }}
-			className="fixed left-0 top-0 z-9 bg-black/40 size-dv"
+			className="fixed left-0 top-0 z-9 bg-black/40 size-screen"
 			exit={{ opacity: 0 }}
 			initial={{ opacity: 0 }}
 			onClick={() => setActive(false)}

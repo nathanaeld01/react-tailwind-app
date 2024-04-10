@@ -91,7 +91,7 @@ export const Navigation = () => {
 	return (
 		<div
 			className={cn(
-				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-dvw items-center justify-between px-[4%] py-7.5 2xl:px-[calc(50%-660px)]",
+				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-screen items-center justify-between px-[4%] py-7.5 2xl:px-[calc(50%-660px)]",
 				isToggled && "active nav-bg max-xl:animate-none",
 				navClasses,
 			)}
@@ -119,7 +119,7 @@ export const Navigation = () => {
 			/>
 			<div
 				className={cn(
-					"grow max-xl:fixed max-xl:left-0 max-xl:top-0 max-xl:hidden max-xl:overflow-y-auto max-xl:bg-white max-xl:px-[4%] max-xl:pt-25 max-xl:size-dv xl:pl-5",
+					"grow max-xl:fixed max-xl:left-0 max-xl:top-0 max-xl:hidden max-xl:overflow-y-auto max-xl:bg-white max-xl:px-[4%] max-xl:pt-25 max-xl:size-screen xl:pl-5",
 					isToggled && "max-xl:block",
 					menuClasses,
 				)}

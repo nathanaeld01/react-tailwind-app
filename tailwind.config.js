@@ -10,9 +10,9 @@ module.exports = {
 				".ring-button": {
 					boxShadow: "0 0 0 2px #242938",
 				},
-				".size-dv": {
-					height: "100dvh",
-					width: "100dvw",
+				".size-screen": {
+					height: "100vh",
+					width: "100vw",
 				},
 				".transition-button": {
 					transition: "box-shadow .3s ease",

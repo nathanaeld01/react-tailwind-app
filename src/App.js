@@ -10,7 +10,7 @@ function App() {
 	return (
 		<>
 			<Navigation />
-			<main className="size-full pt-42.5">
+			<main className="size-full overflow-x-hidden pt-42.5">
 				<PricingSection />
 				<AboutSection />
 				<FeaturesSection />
