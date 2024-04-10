@@ -1,4 +1,4 @@
-import { timezones } from "../../../lib/constants";
+import { timezones } from "../../lib/constants";
 import {
 	Select,
 	SelectContent,
@@ -7,7 +7,7 @@ import {
 	SelectLabel,
 	SelectTrigger,
 	SelectValue,
-} from "../../ui/select";
+} from "../ui/select";
 
 export const DemoTimezones = ({ selectedTimezone, setSelectedTimezone }) => (
 	<Select onValueChange={setSelectedTimezone} value={selectedTimezone}>

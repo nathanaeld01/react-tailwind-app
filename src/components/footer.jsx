@@ -1,14 +1,5 @@
-import { SearchIcon, StarIcon } from "lucide-react";
-
 import { cn } from "../lib/utils";
-import {
-	EmailIcon,
-	G2Icon,
-	GooglePlayIcon,
-	LinkedInIcon,
-	XSocialIcon,
-	YoutubeIcon,
-} from "./icons";
+import { G2Icon, GooglePlayIcon } from "./icons";
 import { Link } from "./ui/link";
 
 const FootItem = ({ active, children, className }) => (
@@ -33,12 +24,12 @@ export const Footer = () => (
 					</p>
 				</div>
 				<div className="mb-22 w-full max-w-64">
-					<div className="mb-2.5 flex gap-1">
-						<StarIcon className="size-4 fill-orange stroke-orange" />
-						<StarIcon className="size-4 fill-orange stroke-orange" />
-						<StarIcon className="size-4 fill-orange stroke-orange" />
-						<StarIcon className="size-4 fill-orange stroke-orange" />
-						<StarIcon className="size-4 fill-orange stroke-orange" />
+					<div className="mb-2.5 flex gap-1 text-orange">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
 					</div>
 					<p className="mb-2.5">Rated 4.8 on G2 and Capterra</p>
 					<div className="flex gap-2.5">
@@ -101,10 +92,7 @@ export const Footer = () => (
 			<div className="w-full pb-22 md:px-[12.5%]">
 				<div className="relative">
 					<div className="absolute inset-y-0 right-2.5 my-auto flex h-4 cursor-pointer gap-2.5">
-						<SearchIcon
-							className="size-4 stroke-primary"
-							strokeWidth="3"
-						/>
+						<i class="fa-solid fa-magnifying-glass size-4 text-primary"></i>
 					</div>
 					<input
 						className="h-12 w-full border-b-2 border-b-primary text-xl outline-none"
@@ -126,17 +114,17 @@ export const Footer = () => (
 				</div>
 			</div>
 			<div className="flex gap-10">
-				<Link>
-					<EmailIcon className="fill-primary hover:fill-green" />
+				<Link className="text-primary transition-[color] duration-300 hover:text-green">
+					<i class="fa-solid fa-envelope text-xl"></i>
 				</Link>
-				<Link>
-					<XSocialIcon className="fill-primary hover:fill-green" />
+				<Link className="text-primary transition-[color] duration-300 hover:text-green">
+					<i class="fa-brands fa-x-twitter text-xl"></i>
 				</Link>
-				<Link>
-					<YoutubeIcon className="fill-primary hover:fill-green" />
+				<Link className="text-primary transition-[color] duration-300 hover:text-green">
+					<i class="fa-brands fa-youtube text-xl"></i>
 				</Link>
-				<Link>
-					<LinkedInIcon className="fill-primary hover:fill-green" />
+				<Link className="text-primary transition-[color] duration-300 hover:text-green">
+					<i class="fa-brands fa-linkedin-in text-xl"></i>
 				</Link>
 			</div>
 		</div>

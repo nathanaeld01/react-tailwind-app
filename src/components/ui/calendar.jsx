@@ -1,4 +1,3 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 
 import { cn } from "../../lib/utils";
@@ -32,9 +31,11 @@ export const Calendar = ({
 				...classNames,
 			}}
 			components={{
-				IconLeft: ({ ...props }) => <ChevronLeft className="size-5" />,
+				IconLeft: ({ ...props }) => (
+					<i class="fa-solid fa-chevron-left text-xl"></i>
+				),
 				IconRight: ({ ...props }) => (
-					<ChevronRight className="size-5" />
+					<i class="fa-solid fa-chevron-right text-xl"></i>
 				),
 			}}
 			disabledDays={[new Date("sunday"), new Date("saturday")]}

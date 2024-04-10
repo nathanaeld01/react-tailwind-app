@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
-import { cn, formatTime } from "../../../lib/utils";
+import { cn, formatTime } from "../../lib/utils";
 
 export const DemoTime = ({
+	onNext,
 	results,
 	selectedTime,
 	selectedTimezone,
@@ -38,6 +39,15 @@ export const DemoTime = ({
 								}}
 								className="h-13 shrink-0 cursor-pointer overflow-hidden rounded bg-[#0069ff] font-bold text-white"
 								exit={{ width: 0 }}
+								onClick={() =>
+									onNext({
+										date: results.date,
+										time: formatTime(
+											date,
+											selectedTimezone,
+										),
+									})
+								}
 							>
 								Next
 							</motion.button>

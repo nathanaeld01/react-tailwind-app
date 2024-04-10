@@ -1,13 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { XIcon } from "lucide-react";
 import { cloneElement, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { ModalContext, useModal } from "../../context/modal-context";
 import { cn } from "../../lib/utils";
 
-const Modal = ({ children }) => {
+const Modal = ({ children, onClose }) => {
 	const [active, setActive] = useState(false);
+
+	useEffect(() => {
+		if (!active) onClose?.();
+	}, [active, onClose]);
 
 	return (
 		<ModalContext.Provider value={{ active, setActive }}>
@@ -44,7 +47,7 @@ const ModalClose = () => {
 			className="fixed right-2 top-2 z-[51] size-5 border-0 bg-transparent text-white outline-none"
 			onClick={() => setActive(false)}
 		>
-			<XIcon className="size-5" />
+			<i class="fa-solid fa-xmark text-xl"></i>
 		</button>
 	);
 };

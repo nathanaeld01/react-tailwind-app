@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import { SearchIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { cn } from "../../lib/utils";
+import { BookDemo } from "../book-demo";
 import { Button } from "../ui/button";
 import { Link } from "../ui/link";
 import {
@@ -16,7 +16,6 @@ import { NavTile, NavTileContent, NavTileTitle } from "./tiles";
 
 // eslint-disable-next-line perfectionist/sort-imports
 import "../../styles/navigation.css";
-import { BookDemo } from "./book-demo";
 
 const FootItem = ({ active, children, className }) => (
 	<Link className={cn("nav-foot-item", active && "active", className)}>
@@ -312,10 +311,7 @@ export const Navigation = () => {
 							</div>
 							<div className="relative text-primary">
 								<div className="absolute inset-y-0 right-2.5 my-auto flex h-4 cursor-pointer gap-2.5">
-									<SearchIcon
-										className="size-4 stroke-primary"
-										strokeWidth="3"
-									/>
+									<i class="fa-solid fa-magnifying-glass size-4 text-primary"></i>
 								</div>
 								<input
 									className="relative z-1 h-12 w-full appearance-none border-b-2 border-b-primary bg-transparent text-xl outline-none"

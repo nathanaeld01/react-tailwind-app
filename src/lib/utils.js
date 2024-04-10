@@ -15,4 +15,8 @@ function formatTime(time, timezone) {
 	return format(fromZonedTime(time, timezone, "h:mm a"), "h:mm a");
 }
 
-export { cn, formatDate, formatTime };
+function getBookingDate(time, date) {
+	return time + ", " + format(new Date(date), "EEEE, MMMM d, yyyy");
+}
+
+export { cn, formatDate, formatTime, getBookingDate };
