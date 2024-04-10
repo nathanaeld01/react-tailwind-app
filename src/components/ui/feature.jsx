@@ -7,7 +7,7 @@ const Content = ({ children }) => (
 	<div class="ExpandedCardLink_hiddenBlock__n6QP6">
 		<p className="mb-7 font-light">{children}</p>
 		<Button>
-			<span class="ButtonFibery_content__jyKHi">Learn more</span>
+			<span>Learn more</span>
 		</Button>
 	</div>
 );

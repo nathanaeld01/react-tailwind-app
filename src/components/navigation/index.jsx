@@ -221,8 +221,8 @@ export const Navigation = () => {
 						</NavDropdownTitle>
 						<NavDropdownMenu>
 							<NavDropdownItem>Features</NavDropdownItem>
-							<NavDropdownItem>Fibery AI</NavDropdownItem>
-							<NavDropdownItem>Fibery vs. X</NavDropdownItem>
+							<NavDropdownItem>Syncspace AI</NavDropdownItem>
+							<NavDropdownItem>Syncspace vs. X</NavDropdownItem>
 							<NavDropdownItem>Customer stories</NavDropdownItem>
 							<NavDropdownItem>Integrations</NavDropdownItem>
 						</NavDropdownMenu>
@@ -275,10 +275,10 @@ export const Navigation = () => {
 									<h4 className="font-semibold">Products</h4>
 									<FootItem>Features</FootItem>
 									<FootItem className="badge new">
-										Fibery AI
+										Syncspace AI
 									</FootItem>
 									<FootItem active>Pricing</FootItem>
-									<FootItem>Fibery vs. X</FootItem>
+									<FootItem>Syncspace vs. X</FootItem>
 									<FootItem>Customer stories</FootItem>
 									<FootItem>Integrations</FootItem>
 									<FootItem>Changelog</FootItem>
