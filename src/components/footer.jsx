@@ -22,7 +22,8 @@ export const Footer = () => (
 		<div className="section-row mb-16 flex flex-col lg:flex-row lg:gap-5">
 			<div className="flex flex-col items-start justify-between sm:max-md:flex-row lg:w-[calc(20%-1.25rem)] lg:justify-start">
 				<div className="mb-22 w-full max-w-64">
-					<Link className="mb-3.5 block text-xl font-semibold hover:no-underline">
+					<Link className="mb-3.5 flex items-center gap-2.5 text-xl font-semibold hover:no-underline">
+						<img alt="Syncspace" className="h-10" src="/logo.png" />
 						Syncspace
 					</Link>
 					<p>

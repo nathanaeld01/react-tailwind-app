@@ -16,6 +16,7 @@ import { NavTile, NavTileContent, NavTileTitle } from "./tiles";
 
 // eslint-disable-next-line perfectionist/sort-imports
 import "../../styles/navigation.css";
+import { BookDemo } from "./book-demo";
 
 const FootItem = ({ active, children, className }) => (
 	<Link className={cn("nav-foot-item", active && "active", className)}>
@@ -63,6 +64,12 @@ export const Navigation = () => {
 		};
 	}, [isScrolled]);
 
+	useEffect(() => {
+		if (isToggled && window.innerWidth > 1024) {
+			setIsToggled(false);
+		}
+	}, [isToggled]);
+
 	const navClasses = clsx(
 		hasScrolled && isHovered && "nav-show",
 		isScrolled && "nav-sticky",
@@ -84,19 +91,20 @@ export const Navigation = () => {
 	return (
 		<div
 			className={cn(
-				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-dvw items-center justify-between px-[4%] py-7.5 hover:bg-white 2xl:px-[calc(50%-660px)]",
-				isToggled && "active max-xl:!animate-none max-sm:bg-white",
+				"navigation group/nav pointer-events-none fixed left-0 top-0 z-5 flex w-dvw items-center justify-between px-[4%] py-7.5 2xl:px-[calc(50%-660px)]",
+				isToggled && "active nav-bg max-xl:animate-none",
 				navClasses,
 			)}
 			ref={navRef}
 		>
 			<div
 				className={cn(
-					"pointer-events-auto text-xl font-semibold",
+					"pointer-events-auto flex items-center gap-2.5 text-xl font-semibold",
 					isToggled && "max-xl:z-4",
 				)}
 			>
-				Syncspace
+				<img alt="Syncspace" className="h-12" src="/logo.png" />
+				<span className={itemClasses}>Syncspace</span>
 			</div>
 			<button
 				className="nav-toggle relative z-4 block size-5 origin-center cursor-pointer xl:hidden"
@@ -325,14 +333,7 @@ export const Navigation = () => {
 						>
 							Log In
 						</Link>
-						<Button
-							className={cn("max-sm:w-full", itemClasses)}
-							size="sm"
-							text="md"
-							variant="secondary"
-						>
-							Get a demo
-						</Button>
+						<BookDemo className={itemClasses} />
 						<Button
 							className="max-sm:w-full"
 							size="sm"

@@ -1,0 +1,59 @@
+.calendar {
+	@apply mx-auto block w-fit;
+}
+
+/****** Table ******/
+.calendar .table {
+	@apply border-separate border-spacing-y-2;
+}
+
+/****** Caption ******/
+.calendar .caption {
+	@apply relative mb-4 flex h-11 items-center px-4;
+}
+
+.calendar .caption .caption-label {
+	@apply w-full text-center text-base font-normal text-gray;
+}
+
+/****** Nav ******/
+.calendar .nav {
+	@apply absolute mx-auto flex h-11 w-11/12 items-center;
+}
+
+.calendar .nav-btn {
+	@apply absolute inline-flex size-9.5 items-center justify-center rounded-full bg-[#0069ff]/5 text-[#0069ff] hover:bg-[#0069ff]/10 disabled:cursor-default disabled:bg-transparent disabled:text-gray/60;
+}
+
+.calendar .nav > .nav-btn-next {
+	@apply right-1;
+}
+
+.calendar .nav > .nav-btn-prev {
+	@apply left-1;
+}
+
+/****** Cells ******/
+.calendar .cell {
+	@apply inline-block size-11 p-0 text-base leading-none;
+}
+
+.calendar .day {
+	@apply relative inline-flex size-11 items-center justify-center rounded-full bg-[#0069ff]/5 p-0 font-heebo text-sm font-extrabold text-[#0060e6] enabled:hover:bg-[#0069ff]/15;
+}
+
+.calendar .day.day-disabled {
+	@apply bg-transparent font-normal text-gray/60;
+}
+
+.calendar .day.day-today {
+	@apply after:absolute after:bottom-2 after:block after:size-1 after:rounded-full after:bg-[#0069ff] after:content-[''];
+}
+
+.calendar .day.day-today.day-selected {
+	@apply after:bg-white;
+}
+
+.calendar .day.day-selected {
+	@apply cursor-default bg-[#0069ff] text-white hover:bg-[#0069ff];
+}

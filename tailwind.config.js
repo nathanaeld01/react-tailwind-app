@@ -24,6 +24,7 @@ module.exports = {
 		extend: {
 			colors: {
 				blue: "#0084FF",
+				gray: "#1a1a1a",
 				green: "#13CF14",
 				"light-gray": {
 					bg: "#F8F9FA",
@@ -87,6 +88,7 @@ module.exports = {
 				5.5: "1.375rem",
 				7.5: "1.875rem",
 				8.5: "2.125rem",
+				9.5: "2.375rem",
 			},
 			zIndex: {
 				1: 1,
@@ -94,6 +96,7 @@ module.exports = {
 				3: 3,
 				4: 4,
 				5: 5,
+				9: 9,
 			},
 		},
 		fontFamily: {

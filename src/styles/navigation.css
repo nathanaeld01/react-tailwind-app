@@ -67,6 +67,10 @@
 	@apply border border-primary content-['fun'];
 }
 
+.navigation.active.nav-bg::before {
+	@apply max-xl:absolute max-xl:left-0 max-xl:top-0 max-xl:z-1 max-xl:block max-xl:size-full max-xl:bg-white max-xl:content-[''];
+}
+
 /****** Nav Animation ******/
 @media screen(xl) {
 	.navigation.nav-show {
