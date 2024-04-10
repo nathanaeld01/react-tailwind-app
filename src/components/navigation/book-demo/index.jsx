@@ -27,8 +27,6 @@ export const BookDemo = ({ className }) => {
 			: null;
 	}, [selectedDate]);
 
-	console.log(selectedDate);
-
 	return (
 		<Modal>
 			<ModalTrigger>

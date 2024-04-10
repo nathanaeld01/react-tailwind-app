@@ -4,7 +4,6 @@ import { cn, formatTime } from "../../../lib/utils";
 
 export const DemoTime = ({
 	results,
-	selectedDate,
 	selectedTime,
 	selectedTimezone,
 	setSelectedTime,
